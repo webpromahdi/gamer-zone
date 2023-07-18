@@ -8,6 +8,9 @@
     --primary-color: #FF42A5;
 }
 /* Through Over Website */
+.maxwidth{
+    width: 48%;
+}
 a{
     text-decoration: none;
 }
@@ -28,6 +31,24 @@ a{
 }
 .logo h1 span{
     color: var(--primary-color);
+}
+.btn{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    margin-right: 20px;
+}
+.btn a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+.btn:nth-child(2){
+    background-color: #4EC5F7;
 }
 
 /* ----------Header Start --------- */
@@ -70,12 +91,66 @@ a{
     padding: 8px 12px;
     color: #3C354F;
 }
-
 /* ----------Navication Menu End--------- */
+
+/* ------------Hero Section Start----------- */
+.hero{
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-content{
+    background-image: url("images/Group\ 14.png");
+    height: 465px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 9vw;
+}
+.hero-content h3{
+    color: #0B0223;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.hero-content h2{
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+.hero-content p{
+    color: #534C64;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+}
+.hero-banner{
+    display: flex;
+    justify-content: space-evenly;
+}
+.hero-banner img{
+    width: 500px;
+    height: 465px;
+}
+/* ------------Hero Section End----------- */
+
+
 
 
 /* Resposive Mobile Device */
 @media screen and (max-width:576px) {
+    .maxwidth{
+        width: 100%;
+    }
     /* Navication */
     .navication{
         flex-direction: column;
@@ -90,12 +165,26 @@ a{
         flex-direction: column;
         row-gap: 30px;
     }
+
+    /* ------------Hero Section----------- */
+    .hero{
+        flex-direction: column-reverse;
+        height: 120vh;
+        padding: 20px;
+    }
+    .hero-banner img{
+        width: 350px;
+        height: 325px;
+    }
 }
 
 
 
 /* Resposive tablet Device */
 @media screen and (min-width:577px) and (max-width:1200px) {
+    .maxwidth{
+        width: 100%;
+    }
         .navication{
         flex-direction: column;
         height: 45vh;
@@ -107,5 +196,19 @@ a{
     .menu ul{
         flex-direction: column;
         row-gap: 30px;
+    }
+
+    /* ------------Hero Section----------- */
+    .hero{
+        flex-direction: column-reverse;
+        height: 120vh;
+        padding: 20px;
+    }
+    .hero-content{
+        text-align: center;
+    }
+    .hero-banner img{
+        width: 350px;
+        height: 325px;
     }
 }
