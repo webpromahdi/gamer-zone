@@ -8,6 +8,10 @@
     --primary-color: #FF42A5;
 }
 /* Through Over Website */
+main{
+    max-width: 80%;
+    margin: 0 auto;
+}
 .maxwidth{
     width: 48%;
 }
@@ -34,7 +38,7 @@ a{
 }
 .btn{
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 15px 20px;
     border-radius: 25px;
     background-color: var(--primary-color);
@@ -43,8 +47,8 @@ a{
 .btn a{
     text-decoration: none;
     color: #FFF;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     
 }
 .btn:nth-child(2){
@@ -95,7 +99,7 @@ a{
 
 /* ------------Hero Section Start----------- */
 .hero{
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: space-between;
 }
@@ -143,11 +147,55 @@ a{
 }
 /* ------------Hero Section End----------- */
 
+/* ------------We are gamer Section Start----------- */
+.wag{
+    display: flex;
+    background-color: rgba(255, 66, 165, 0.03);
+}
+.wag-content{
+    text-align: right;
+    margin-top: 130px;
+}
+.wag-content h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+.wag-content p{
+    color: #534C64;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+}
+.wag-content #purpose{
+    color: #534C64;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-top: 30px;
+}
+.wag-content #slogan{
+    color: #534C64;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* ------------We are gamer Section End----------- */
+
 
 
 
 /* Resposive Mobile Device */
 @media screen and (max-width:576px) {
+    main{
+        max-width: 90%;
+        margin: 0 auto;
+    }
     .maxwidth{
         width: 100%;
     }
@@ -176,12 +224,28 @@ a{
         width: 350px;
         height: 325px;
     }
+
+    /* ------------We are gamer Section----------- */
+    .wag{
+        flex-direction: column;
+    }
+    .wag-content{
+        text-align: center;
+        margin: 0;
+    }
+    .wag-banner img{
+        width: 350px;
+    }
 }
 
 
 
 /* Resposive tablet Device */
 @media screen and (min-width:577px) and (max-width:1200px) {
+    main{
+        max-width: 90%;
+        margin: 0 auto;
+    }
     .maxwidth{
         width: 100%;
     }
@@ -208,7 +272,20 @@ a{
         text-align: center;
     }
     .hero-banner img{
-        width: 350px;
-        height: 325px;
+        width: 550px;
+        height: 425px;
+    }
+
+    /* ------------We are gamer Section----------- */
+    .wag{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wag-content{
+        text-align: center;
+        margin: 0;
+    }
+    .wag-banner img{
+        width: 480px;
     }
 }
