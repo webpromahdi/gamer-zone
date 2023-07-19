@@ -227,19 +227,62 @@ a{
     grid-template-columns: repeat(4, 1fr);
     margin-top: 45px;
 }
-.video-container img{
+.video-box .main-video img{
+    display: block;
     width: 310px;
     height: 330px;
+    border: 3px solid transparent;
     border-radius: 15px;
     transition: 0.5s;
 }
-.video-container img:hover{
-    border: 3px solid #F948B2;
+.video-box{
+    position: relative;
+    display: inline-block;
 }
 .video-container .video-box p{
     text-align: left;
     margin-top: 15px;
 }
+.main-video{
+    position: relative;
+}
+.main-video::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    border: 3px solid #F948B2;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .main-video:hover::before {
+    opacity: 1;
+  }
+.video-play-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.main-video:hover .video-play-btn{
+    opacity: 0.8;
+}
+.video-play-btn p{
+    color: #ff0544;
+    font-size: 1.2rem;
+}
+
 /* ----------Game Videos Section End---------------- */
 
 /* ---------------Play Game Section Start ----------*/
@@ -310,12 +353,12 @@ a{
     align-items: center;
     column-gap: 10px;
     cursor: pointer;
-    border: 2px solid white;
+    border: 2px solid transparent;
     border-radius: 50px;
     transition: 0.1s;
 }
 .game-labels .label:hover{
-    border: 2px solid #F948B2;
+    border: 1px solid #F948B2;
     padding: 5px;
 }
 .game-labels h4{
