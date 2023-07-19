@@ -228,7 +228,7 @@ a{
     margin-top: 45px;
 }
 .video-container img{
-    width: 280px;
+    width: 310px;
     height: 330px;
     border-radius: 15px;
     transition: 0.5s;
@@ -242,11 +242,90 @@ a{
 }
 /* ----------Game Videos Section End---------------- */
 
+/* ---------------Play Game Section Start ----------*/
+.play-game{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15vw;
+    margin-top: 100px;
+    align-items: center;
+    text-align: right;
+}
+.playgame-content h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.playgame-content h2 span{
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+.playgame-content p{
+    color: #534C64;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 10px;
+}
 
+.playgamebanner{
+    position: relative;
+}
+.playgamebanner .pg-bigimg{
+    width: 515px;
+    height: 535px;
+    background-image: url("images/Rectangle\ 55.png");
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    
+}
+.playgamebanner .pg-smallimg{
+    width: 258px;
+    height: 290px;
+    background-image: url("images/Rectangle\ 66.png");
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: -100px;
+    left: -130px;
+}
+/* ---------------Play Game Section End ----------*/
 
+/* ------------Game Lbels Start ------------*/
+.game-labels{
+    margin-top: 30vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+.game-labels .label{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: 0.1s;
+}
+.game-labels .label:hover{
+    border: 2px solid #F948B2;
+    padding: 5px;
+}
+.game-labels h4{
+    color: #0B0223;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+}
+/* ------------Game Lbels End ------------*/
 
-
-/* Resposive Mobile Device */
+/*>>>>>>>>>>>>>>>> Resposive Mobile Device <<<<<<<<<<<<<<<<<<<<<<*/
 @media screen and (max-width:576px) {
     .main{
         max-width: 100%;
@@ -306,6 +385,40 @@ a{
     }
     .video-container .video-box p{
         text-align: center;
+    }
+
+    /* Play Game Section */
+    .play-game{
+        flex-direction: column;
+        row-gap: 10vh;
+        text-align: center;
+    }
+    .playgamebanner .pg-bigimg{
+        width: 310px;
+        height: 360px;
+        
+    }
+    .playgamebanner .pg-smallimg{
+        width: 150px;
+        height: 200px;
+        /* position: absolute; */
+        bottom: -70px;
+        left: -50px;
+    }
+
+    /* Game label */
+    .game-labels{
+        max-width: 100;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+    }
+    .game-labels .label{
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .game-labels h4{
+        font-size: 0.875rem;
     }
 }
 
@@ -374,4 +487,39 @@ a{
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+
+    /* Play Game Section */
+    .play-game{
+        flex-direction: column;
+        row-gap: 10vh;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .playgamebanner .pg-bigimg{
+        width: 450px;
+        height: 510px;
+        
+    }
+    .playgamebanner .pg-smallimg{
+        width: 250px;
+        height: 300px;
+        /* position: absolute; */
+        bottom: -70px;
+        left: -120px;
+    }
+        /* Game label */
+        .game-labels{
+            margin-top: 200px;
+            max-width: 100;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+        }
+        .game-labels .label{
+            flex-direction: column;
+            text-align: center;
+            gap: 5px;
+        }
+        .game-labels h4{
+            font-size: 0.875rem;
+        }
 }
