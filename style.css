@@ -325,6 +325,45 @@ a{
 }
 /* ------------Game Lbels End ------------*/
 
+/* Footer */
+footer{
+    background-color: #0B0223;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 55px;
+}
+footer .logo h1{
+    color: white;
+}
+footer .pages ul{
+    display: flex;
+    column-gap: 30px;
+}
+footer .pages ul li{
+    list-style-type: none;
+}
+footer .pages ul li a{
+    color: #FFF;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+footer .social i{
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 3rem;
+}
+#soft{
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.copyright{
+    margin-top: -20px;
+}
+
 /*>>>>>>>>>>>>>>>> Resposive Mobile Device <<<<<<<<<<<<<<<<<<<<<<*/
 @media screen and (max-width:576px) {
     .main{
@@ -419,6 +458,25 @@ a{
     }
     .game-labels h4{
         font-size: 0.875rem;
+    }
+
+    /* Footer */
+    footer{
+        height: 80vh;
+    }
+    footer .pages ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    footer .pages2 ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        text-align: center;
+    }
+    .copyright{
+        text-align: center;
     }
 }
 
