@@ -43,6 +43,7 @@ a{
     border-radius: 25px;
     background-color: var(--primary-color);
     margin-right: 20px;
+    transition: 0.3s;
 }
 .btn a{
     text-decoration: none;
@@ -51,10 +52,15 @@ a{
     font-weight: 500;
     
 }
+.btn:hover{
+    background-color: #ca0169;
+}
 .btn:nth-child(2){
     background-color: #4EC5F7;
 }
-
+.btn:nth-child(2):hover{
+    background-color: #0eb4fc;
+}
 /* ----------Header Start --------- */
 
 /* ----------Header End--------- */
@@ -199,7 +205,7 @@ a{
 
 /* ----------Game Videos Section Start---------------- */
 .game-video{
-    margin-top: 81px;
+    margin-top: 80px;
 }
 .game-video h2{
     text-align: center;
