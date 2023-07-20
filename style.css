@@ -349,23 +349,26 @@ a{
 /* ------------Game Lbels Start ------------*/
 .game-labels{
     margin-top: 30vh;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    padding: 0 0 60px 0;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 0 60px 0; */
 }
 .game-labels .label{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     column-gap: 10px;
     cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 50px;
+    border: 1px solid white;
     transition: 0.1s;
+    padding: 5px;
 }
 .game-labels .label:hover{
     border: 1px solid #F948B2;
-    padding: 5px;
+    border-radius: 50px;
 }
 .game-labels h4{
     color: #0B0223;
@@ -377,6 +380,7 @@ a{
 
 /* Footer */
 footer{
+    margin-top: 20vh;
     background-color: #0B0223;
     height: 60vh;
     display: flex;
@@ -498,6 +502,7 @@ footer .social i{
     /* Game label */
     .game-labels{
         max-width: 100;
+        display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 30px;
     }
@@ -619,6 +624,7 @@ footer .social i{
         .game-labels{
             margin-top: 200px;
             max-width: 100;
+            display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 30px;
         }
