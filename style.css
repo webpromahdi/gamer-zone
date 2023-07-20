@@ -280,6 +280,7 @@ a{
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5s ease;
+    cursor: pointer;
 }
 .main-video:hover .video-play-btn{
     opacity: 0.8;
